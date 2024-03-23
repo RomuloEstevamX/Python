@@ -26,3 +26,7 @@
 #print(F'PROD = {PROD}')
 
 #1005
+#a = float(input())
+#b = float(input())
+#media = float(a*3.5+b*7.5)/11
+#print(F'MEDIA = {media:.5f}')
