@@ -1,0 +1,67 @@
+check1 = int()
+check2 = int()
+mediasprint2 = int()
+contcheck = 1
+mediacheck = int()
+print('Insiria a frequência do aluno:')
+frequencia = int(input())
+if frequencia ==75:
+    print('Aluno frequente')
+else:
+    print('Aluno reprovado por faltas!')
+break
+while contcheck <=2:
+    print("Insira nota de 0 a 100 do checkpoint 1")
+    checkpoint1 = int(input())
+    print("Insira nota de 0 a 100 do checkpoint 2")
+    checkpoint2 = int(input())
+    print("Insira nota de 0 a 100 do checkpoint 3")
+    checkpoint3 = int(input())
+    if checkpoint1 >= checkpoint2 and checkpoint2 >= checkpoint3:
+        mediacheck= (checkpoint1 + checkpoint2)/2
+
+    if checkpoint2 >= checkpoint1 and checkpoint1 >= checkpoint3:
+        mediacheck= (checkpoint2+checkpoint1)/2
+    if checkpoint3 >= checkpoint1 and checkpoint3 >= checkpoint2:
+        mediacheck= (checkpoint3+checkpoint1)/2
+    if checkpoint2 >= checkpoint3 and checkpoint3 >= checkpoint1:
+        mediacheck= (checkpoint2+checkpoint3)/2
+    if contcheck == 1:
+        check1 = (mediacheck)
+        print(f'A sua média de Checkpoints do 1° semestre é:{check1}')
+    if contcheck == 2:
+        check2 = (mediacheck)
+        print(f'A sua média de Checkpoints do 2° semestre é:{check2}')
+    contcheck += 1
+
+print('Insira as notas dos sprints do 1° semestre:')
+sprint = 1
+while sprint <=2:
+    if sprint == 1:
+        sprint1 = int(input())
+        print ('Insira a segunda nota: ')
+        sprint2 = int(input())
+        mediasprint1 = (sprint1 + sprint2)/2
+        print(f'A sua média nos sprints do 1° semestre são:{mediasprint1}')
+    if sprint == 2:
+        print('Insira as notas das sprints do 2° semestre:')
+        sprint3 = int(input())
+        print ('Insira a segunda nota: ')
+        sprint4 = int(input())
+        mediasprint2 = (sprint1 + sprint2)/2
+        print(f'A sua média nos sprints do 2° semestre são:{mediasprint2}')
+    sprint += 1
+
+print('Insira a sua nota da Global Solution no 1° semestre:')
+gs1 = int(input())
+print('Insira a sua nota da Global Solution no 2° semestre:')
+gs2 = int(input())
+print('A sua média geral do 1° semestre com peso de 40% é de: ')
+mediachecksprint1 = (check1 + mediasprint1)/2
+print((mediachecksprint1)*0.4)
+print('A sua média geral do 1° semestre com peso de 40% é de: ')
+gs1dvdd = (check2+mediasprint2)/2
+print((gs1dvdd)*0.4)
+print('A sua média geral do 2° semestre com peso de 60% é de: ')
+print (gs2*0.6)
+
